@@ -22,7 +22,7 @@ type ConsistentHashing struct {
 	NumOfVirtualNode int               // 虚拟节点个数，这个有啥用？
 	hashSortedKeys   SortedKeys        // 排序后的所有服务器Hash值
 	circleRing       map[uint32]string // map key:value  =>  服务器ID:服务器名称
-	serverSet        map[string]bool   // map key:value  =>  服务器名称:bool
+	serverSet        map[string]bool   // map key:value  =>  服务器名称:bool 这里直接改成[]string不可以吗？
 }
 
 // NewConsistentHashing 新建一个一致性Hash数据结构
